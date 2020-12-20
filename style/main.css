@@ -1,3 +1,39 @@
+:root { /*Elemento raiz do css, pode-se criar variáveis de algo que pode se tornar repetitivo no código*/
+    --vermelho: #E50914;    /*Declaracao de variáveis*/
+    --preto: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Limite o elemento a ficar dentro da "caixa", se passar o tamanho definido eles tendem a se espremer*/
+}
+
 body {
-    background-color: blue;
+    background: var(--preto); /*Utilizacao da variável*/
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black';
+    font-size: 40px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover {
+    color: #fff;
 }
